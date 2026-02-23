@@ -1,67 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My HTML Experience</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ben Beady course project site focused on semantic HTML and meaningful content.">
+  <meta name="author" content="Ben Beady">
+  <title>Home | Ben Beady</title>
 </head>
 <body>
 
-    <h1>My Background and Experience</h1>
+<header>
+  <h1>Ben Beady</h1>
+  <p>A three page site built to practice semantic HTML and clear structure.</p>
 
-    <p>
-        My name is Ben, and this web page was created for Assignment 1. I have prior
-        experience working with HTML through a software development internship where
-        I built and edited web forms used in real projects. This included creating
-        input fields, labels, and submit buttons to collect user data.
-    </p>
-
-    <p>
-        During my internship, I worked with HTML regularly and became comfortable
-        structuring pages using proper HTML5 elements. I am familiar with building
-        forms, organizing content, and making sure pages function correctly for users.
-        This assignment demonstrates my understanding of HTML fundamentals.
-    </p>
-
-    <h2>Technical Interests</h2>
+  <nav aria-label="Site navigation">
     <ul>
-        <li>Software development</li>
-        <li>Building and maintaining web forms</li>
-        <li>Learning new web technologies</li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
     </ul>
+  </nav>
+</header>
 
-    <h2>Helpful Development Resources</h2>
-    <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a><br>
-    <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+<main>
+  <section>
+    <h2>What this site is for</h2>
+    <p>This website is a course project focused on writing real content and organizing it using semantic HTML5. The point is to build pages that make sense even without styling, so the structure and meaning come first.</p>
+    <p>I am using headings to create a clear outline on each page. If someone skimmed only the headings, they should still understand what the page is about and where to find information.</p>
+    <p>Instead of filling the page with extra features, I am focusing on basic web fundamentals that support usability. This includes readable paragraph content, consistent navigation, and predictable page organization.</p>
+  </section>
 
-    <h2>Sample Image</h2>
-    <img src="https://d2jyir0m79gs60.cloudfront.net/college/logos/University_of_Kentucky.png" alt="Sample image UKY">
+  <section>
+    <h2>My background with HTML</h2>
 
-    <h2>Experience Summary</h2>
-    <table border="1">
+    <article>
+      <h3>Hands on experience</h3>
+      <p>I have used HTML in real work settings, mainly to build and edit web forms and structured content for users. That experience taught me that small details matter, like clear labels, good ordering, and content that matches what the user expects.</p>
+    </article>
+
+    <article>
+      <h3>What I am practicing in this project</h3>
+      <p>In this project I am practicing semantic elements such as header, nav, main, section, article, and footer. I want the page to communicate meaning through structure instead of relying on layout tricks.</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Resources I actually use</h2>
+    <p>When I learn or troubleshoot HTML, I rely on documentation and examples that explain not only how something works, but why it works. These are two resources I return to often.</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+      <li><a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Optional table of experience</h2>
+    <p>This table summarizes a few areas where I have practical experience. It is included because it represents structured information that is easier to scan as a table than as a paragraph.</p>
+
+    <table>
+      <caption>Experience Summary</caption>
+      <thead>
         <tr>
-            <th>Skill</th>
-            <th>Experience</th>
+          <th scope="col">Skill</th>
+          <th scope="col">Example Experience</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HTML Forms</td>
+          <td>Built and edited form pages with input fields, labels, and validation expectations.</td>
         </tr>
         <tr>
-            <td>HTML Forms</td>
-            <td>Built and maintained forms during a software development internship</td>
+          <td>Semantic Structure</td>
+          <td>Organized content using headings and meaningful elements instead of generic containers.</td>
         </tr>
-        <tr>
-            <td>HTML Structure</td>
-            <td>Experience using HTML5 tags to structure pages correctly</td>
-        </tr>
+      </tbody>
     </table>
+  </section>
+</main>
 
-    <h2>Contact Form Example</h2>
-    <form>
-        <label for="fname">First Name:</label><br>
-        <input type="text" id="fname" name="fname"><br><br>
-
-        <label for="lname">Last Name:</label><br>
-        <input type="text" id="lname" name="lname"><br><br>
-
-        <input type="submit" value="Submit">
-    </form>
+<footer>
+  <p>© 2026 Ben Beady</p>
+</footer>
 
 </body>
 </html>
