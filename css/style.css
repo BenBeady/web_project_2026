@@ -1,0 +1,39 @@
+body {
+  background-color: #f4f6f8;
+  color: #1f2328;
+  font-family: Arial, sans-serif;
+  font-size: 1rem; /* relative unit */
+}
+
+p {
+  color: #1f2328;
+}
+
+h1 {
+  color: #0b2d5c;
+}
+
+
+#main-heading {
+  color: #0b2d5c;
+}
+
+
+.highlight {
+  color: #7a1f1f;
+}
+
+
+nav ul {
+  background-color: #e6ecf2;
+}
+
+
+section > h2 {
+  color: #2f3a45;
+}
+
+
+a {
+  color: #0b2d5c;
+}
