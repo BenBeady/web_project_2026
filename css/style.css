@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-color: #f4f6f8;
+  background: linear-gradient(135deg, #f4f6f8 0%, #e6ecf2 100%);
   color: #1f2328;
   font-size: 1rem;
   line-height: 1.6;
@@ -44,6 +44,10 @@ h3 {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  margin: 1rem 0;
 }
 
 #main-heading {
@@ -96,6 +100,7 @@ main {
   margin: 0 auto;
   padding: 1rem;
   border: 1px solid #d0d7de;
+  background-color: #ffffff;
 }
 
 section {
@@ -103,6 +108,24 @@ section {
   padding: 1.25rem;
   border: 1px solid #c8d3dd;
   width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 0.4rem 0 0.4rem 1.5rem;
+  position: relative;
+}
+
+ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #0b2d5c;
+  font-weight: 700;
 }
 
 section article.box-demo-parent {
