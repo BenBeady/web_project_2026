@@ -3,26 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Ben Beady. Background, interests, and what I am building in this course project.">
-  <meta name="author" content="Ben Beady">
-  <title>About | Ben Beady</title>
+  <meta name="description" content="About Benjamen Beady — Software Developer at GetUWired. Background in full stack development, client work, and web accessibility.">
+  <meta name="author" content="Benjamen Beady">
+  <title>About | Benjamen Beady</title>
   <link rel="stylesheet" href="css/styles.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About | Ben Beady",
-    "description": "About Ben Beady. Background, interests, and what I am building in this course project.",
+    "name": "About Benjamen Beady",
+    "description": "Background and professional profile of Benjamen Beady, Software Developer at GetUWired in Dahlonega, GA.",
     "mainEntity": {
       "@type": "Person",
-      "name": "Ben Beady",
-      "description": "I like building things that actually do something useful, and I care about making the experience clear for the person using it.",
-      "knowsAbout": ["Full Stack Development", "Backend Development", "Semantic HTML", "APIs"]
+      "name": "Benjamen Beady",
+      "jobTitle": "Software Developer",
+      "description": "Full stack software developer working remotely at GetUWired. Builds accessible, semantically rich websites for musicians, Greek organizations, and business clients.",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "GetUWired",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dahlonega",
+          "addressRegion": "GA",
+          "addressCountry": "US"
+        }
+      },
+      "sameAs": ["https://www.linkedin.com/in/benjamenbeady"],
+      "knowsAbout": ["Full Stack Development", "Backend Development", "Semantic HTML5", "CSS3", "JavaScript", "APIs", "Web Accessibility", "JSON-LD"]
     }
   }
   </script>
 </head>
 <body>
+
 <header>
   <h1 id="main-heading">About Me</h1>
   <nav aria-label="Site navigation">
@@ -30,37 +43,59 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
+
 <main>
+
   <section>
     <h2>Who I am</h2>
-    <p>My name is Ben Beady and I built this site as part of my coursework, but I am treating it like the beginning of a real portfolio. I want it to feel clear and organized, not like a bunch of random practice files thrown together.</p>
-    <p class="highlight">I like building things that actually do something useful, and I care about making the experience clear for the person using it.</p>
-    <p>I am most interested in full stack work, especially the backend side where systems connect, data moves around, and one small bug can break everything. I like figuring out how to make things reliable.</p>
+    <p>My name is Benjamen Beady. I'm a software developer working remotely at <strong>GetUWired</strong>, a web development company based in Dahlonega, GA. My background is in full stack development — I'm comfortable across the entire web stack, though my real passion lives on the back end, where data flows, systems connect, and the behavior of an application gets decided.</p>
+    <p class="highlight">I build things that work reliably for real people — not just in controlled demos, but in production, under actual use.</p>
+    <p>Outside of GetUWired, I take on independent projects for clients I genuinely care about. Most recently, that has included building the official website for <strong>Pi Kappa Alpha at the University of Kentucky</strong> and working closely with musician <strong>Bill Leroy of The Bannas</strong> on his artist website, which is launching soon.</p>
   </section>
+
   <section>
-    <h2>How I think about web development</h2>
+    <h2>How I approach development</h2>
+
     <article>
-      <h3>Structure first</h3>
-      <p>I used to rush toward adding features or making something look cool. This project is forcing me to slow down and focus on structure and meaning. If the HTML is messy or unclear, styling later will not fix it.</p>
-      <p>That is why I am using semantic elements like header, nav, main, section, article, and footer. I want the page to make sense even without any CSS.</p>
+      <h3>Semantic structure first</h3>
+      <p>Before I think about design or interactivity, I think about structure. A page built on solid semantic HTML communicates meaning to browsers, screen readers, search engines, and future developers — not just the person currently looking at it. That foundation matters.</p>
+      <p>I use elements like <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>aside</code>, and <code>footer</code> because they carry meaning. Generic <code>div</code> containers don't. That's a small discipline that compounds over time into code that is easier to maintain and easier for everyone to use.</p>
     </article>
+
     <article>
-      <h3>Details matter</h3>
-      <p>From past experience, I learned that small details are what separate a page that feels smooth from a page that feels confusing. Headings, labels, and logical ordering are the difference between a user trusting a site and leaving it instantly.</p>
-      <p>I am working on making my writing more specific instead of filler. If I say I know something, I want to back it up with what I actually did, what I learned, and what I can improve next.</p>
+      <h3>Accessibility is not optional</h3>
+      <p>Web accessibility isn't a feature to add at the end — it's a standard that shapes how I build from the beginning. Every project I deliver is tested with WAVE and reviewed with screen reader tooling. I implement ARIA attributes, logical heading hierarchies, visible focus states, and color contrast that meets WCAG AA standards.</p>
+      <p>Testing my own sites in high-contrast mode and with VoiceOver has taught me more about accessibility than any documentation. It changed how I write markup at a fundamental level.</p>
+    </article>
+
+    <article>
+      <h3>Details are the product</h3>
+      <p>In my experience, the difference between a site that feels trustworthy and one that feels rough is almost always in the details — heading hierarchy, consistent spacing, labels that match their inputs, error states that are actually helpful. Users don't consciously notice these things when they're right. They notice immediately when they're wrong.</p>
     </article>
   </section>
+
   <section>
-    <h2>What I want to improve</h2>
-    <p>I want to get better at explaining my work. I can build things, but being able to communicate clearly is just as important, especially if I am showing projects to employers or teammates.</p>
-    <p>I also want to keep improving my technical foundation. For me that means getting stronger with backend logic, APIs, and building systems that behave correctly when real people use them.</p>
+    <h2>Professional background</h2>
+    <p>I currently work full-time as a software developer at <strong>GetUWired</strong>, fully remote from Dahlonega, GA. Day to day, this means building and maintaining production websites for a diverse set of business clients — spanning new site builds, feature development, CMS integrations, performance improvements, and ongoing maintenance.</p>
+    <p>Working in a remote professional environment has sharpened not just my technical skills but my communication and project management habits. Shipping quality work without in-person oversight requires real discipline, clear documentation, and the ability to ask the right questions before going far down the wrong path.</p>
+    <p>I'm also active on LinkedIn — feel free to connect: <a href="https://www.linkedin.com/in/benjamenbeady" target="_blank" rel="noopener noreferrer">linkedin.com/in/benjamenbeady</a>.</p>
   </section>
+
+  <section>
+    <h2>What I'm working on</h2>
+    <p>Right now, beyond my work at GetUWired, I am focused on two external projects. The Kentucky Pi Kappa Alpha site is live and serving the chapter's community. The Bill Leroy artist website is in its final stages and will launch shortly — it's been a great collaboration and I'm proud of what we built together.</p>
+    <p>Longer term, I want to keep deepening my backend skills — specifically in APIs, data architecture, and building systems that behave correctly and predictably at scale. The front end is where users live; the back end is where reliability is decided. I want to be strong at both.</p>
+  </section>
+
 </main>
+
 <footer>
-  <p>© 2026 Ben Beady</p>
+  <p>&copy; 2026 Benjamen Beady &mdash; Software Developer at GetUWired</p>
 </footer>
+
 </body>
 </html>
