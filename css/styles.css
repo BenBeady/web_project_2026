@@ -1,6 +1,6 @@
 /* ============================================================
-   Ben Beady — Personal Site
-   css/styles.css  |  Spring 2026
+   Benjamen Beady — Professional Portfolio
+   css/styles.css  |  2026
    ============================================================
    TABLE OF CONTENTS
      1.  Google Fonts Import
@@ -32,39 +32,37 @@
 
 /* ============================================================
    2. CSS CUSTOM PROPERTIES
-   Central palette — change one value, update the whole site.
-   Warm & earthy: cream, terracotta, forest green, walnut brown.
+   Refined dark navy with warm terracotta and forest green.
    ============================================================ */
 :root {
-  /* --- Colors (HEX values for consistency) --- */
-  --clr-bg:           #fdf6ec;   /* warm cream page background    */
-  --clr-surface:      #ffffff;   /* white card surface            */
-  --clr-surface-alt:  #f7ede0;   /* light beige (alt rows, boxes) */
-  --clr-header-bg:    #3e2a1a;   /* dark walnut brown             */
-  --clr-primary:      #c0603a;   /* terracotta — main accent      */
-  --clr-secondary:    #4a7c59;   /* forest green — second accent  */
-  --clr-border:       #d4b896;   /* warm tan border               */
-  --clr-text:         #2e1f0e;   /* dark warm brown body text     */
-  --clr-text-light:   #f5e6d3;   /* cream text on dark bg         */
-  --clr-muted:        #7a5c3e;   /* mid-brown for captions/footer */
-  --clr-highlight-bg: #e8f5ec;   /* soft green tint for demo box  */
+  --clr-bg:           #f4f1ec;
+  --clr-surface:      #ffffff;
+  --clr-surface-alt:  #f9f6f1;
+  --clr-header-bg:    #1c2533;
+  --clr-primary:      #b85c2c;
+  --clr-secondary:    #2e6b4f;
+  --clr-border:       #ddd5c8;
+  --clr-text:         #1e1a16;
+  --clr-text-light:   #f0ece4;
+  --clr-muted:        #6b5d4f;
+  --clr-highlight-bg: #edf4ef;
+  --clr-amber:        #c47a0d;
 
-  /* --- Typography --- */
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body:    'Lato', Arial, Helvetica, sans-serif;
 
-  /* --- Shape & Shadow --- */
-  --radius: 6px;
-  --shadow: 0 4px 20px rgba(62, 42, 26, 0.15);
+  --radius:    6px;
+  --shadow-sm: 0 2px 8px rgba(28, 37, 51, 0.10);
+  --shadow:    0 4px 24px rgba(28, 37, 51, 0.14);
+  --shadow-lg: 0 8px 40px rgba(28, 37, 51, 0.18);
 }
 
 
 /* ============================================================
    3. RESET & BOX MODEL
-   Apply border-box sizing globally; strip browser defaults.
    ============================================================ */
 html {
-  font-size: 100%;        /* 1rem = 16px browser default */
+  font-size: 100%;
   box-sizing: border-box;
 }
 
@@ -80,185 +78,181 @@ body {
   background-color: var(--clr-bg);
   color: var(--clr-text);
   font-family: var(--font-body);
-  font-size: 1rem;        /* rem unit */
-  line-height: 1.75;
-  min-height: 100vh;      /* vh unit — at least full viewport height */
-  padding: 2rem 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
 }
 
 
 /* ============================================================
    4. BASE TYPOGRAPHY
-   Global font styles. Headings styled differently from body text.
    ============================================================ */
-
-/* Element selector — h1 (page title, inside header) */
 h1 {
   font-family: var(--font-heading);
-  font-size: 2.25rem;     /* rem unit */
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--clr-text-light);
-  letter-spacing: 0.03em; /* em unit */
+  letter-spacing: 0.01em;
+  line-height: 1.15;
 }
 
-/* Element selector — h2 (section titles) */
 h2 {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--clr-primary);
   margin-bottom: 1rem;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--clr-border);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
 }
 
-/* Element selector — h3 (article / sub-section titles) */
 h3 {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--clr-secondary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   letter-spacing: 0.02em;
 }
 
-/* Element selector — paragraphs */
 p {
   margin-bottom: 1em;
   color: var(--clr-text);
-  text-align: left;
 }
 
-/* Pseudo-class selector — remove margin from last child paragraph */
 p:last-child {
   margin-bottom: 0;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.88em;
+  background-color: var(--clr-surface-alt);
+  color: var(--clr-amber);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  border: 1px solid var(--clr-border);
 }
 
 
 /* ============================================================
    5. LINKS & PSEUDO-CLASS SELECTORS
-   :visited, :hover, :focus demonstrate multiple pseudo-classes.
    ============================================================ */
-
-/* Element selector */
 a {
   color: var(--clr-primary);
   text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-/* Pseudo-class: visited links slightly muted */
 a:visited {
   color: var(--clr-muted);
 }
 
-/* Pseudo-class: hover changes color */
 a:hover {
   color: var(--clr-secondary);
   text-decoration: none;
 }
 
-/* Pseudo-class: visible keyboard-focus ring for accessibility */
 a:focus {
   outline: 2px solid var(--clr-primary);
-  outline-offset: 2px;
+  outline-offset: 3px;
   border-radius: 2px;
 }
 
 
 /* ============================================================
    6. IMAGES
-   max-width + height:auto keeps images responsive in containers.
    ============================================================ */
 img {
-  max-width: 200px;          /* px unit */
-  width: 100%;               /* % unit  */
+  max-width: 180px;
+  width: 100%;
   height: auto;
   display: block;
   border-radius: 50%;
-  border: 4px solid var(--clr-primary);  /* solid border style */
+  border: 4px solid var(--clr-primary);
   box-shadow: var(--shadow);
-  margin: 0 auto 1.5rem auto;
+  margin: 0 auto 2rem auto;
 }
 
 
 /* ============================================================
    7. BLOCKQUOTE
-   Uses a double left border to satisfy the border-style requirement.
+   Uses a double left border style.
    ============================================================ */
 blockquote {
-  margin: 1.5rem 0;
-  padding: 1rem 1.5rem;
-  border-left: 6px double var(--clr-primary);  /* double border style */
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.75rem;
+  border-left: 6px double var(--clr-primary);
   background-color: var(--clr-surface-alt);
   border-radius: 0 var(--radius) var(--radius) 0;
   font-style: italic;
   color: var(--clr-muted);
 }
 
-/* Child selector — <p> that is a direct child of blockquote */
 blockquote > p {
   margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  font-family: var(--font-heading);
 }
 
 
 /* ============================================================
    8. TABLES
-   Striped rows; child selectors target thead > tr > th precisely.
    ============================================================ */
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
-  margin-top: 1rem;
+  font-size: 0.92rem;
+  margin-top: 1.25rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 caption {
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: var(--clr-muted);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   text-align: left;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.07em;
 }
 
-/* Child selector — th directly inside thead rows */
 thead > tr > th {
-  background-color: var(--clr-primary);
-  color: #ffffff;
-  padding: 0.6rem 0.75rem;
+  background-color: var(--clr-header-bg);
+  color: var(--clr-text-light);
+  padding: 0.75rem 1rem;
   text-align: left;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 td {
-  padding: 0.6rem 0.75rem;
+  padding: 0.7rem 1rem;
   border-bottom: 1px solid var(--clr-border);
   vertical-align: top;
+  color: var(--clr-text);
 }
 
-/* Pseudo-class: even rows tinted for readability */
 tbody tr:nth-child(even) {
   background-color: var(--clr-surface-alt);
 }
 
-/* Pseudo-class: row highlight on hover */
 tbody tr:hover {
-  background-color: #f0d9c5;
+  background-color: #ede5d8;
 }
 
 
 /* ============================================================
    9. LISTS
-   Custom arrow bullets; nav list overrides these below.
    ============================================================ */
-
-/* Element selector */
 ul {
   list-style: none;
   padding: 0;
@@ -266,11 +260,11 @@ ul {
 }
 
 ul li {
-  padding: 0.35rem 0 0.35rem 1.5rem;
+  padding: 0.4rem 0 0.4rem 1.6rem;
   position: relative;
+  color: var(--clr-text);
 }
 
-/* Pseudo-element: arrow inserted before each list item */
 ul li::before {
   content: "→";
   position: absolute;
@@ -282,45 +276,41 @@ ul li::before {
 
 /* ============================================================
    10. HEADER & NAVIGATION
-   display:flex (column) stacks: title → nav → skip-link.
-   Nav uses display:flex (row) with flex-wrap for mobile.
+   display:flex (column) stacks: title, nav, skip-link.
+   Nav uses display:flex (row) with flex-wrap.
    ============================================================ */
 header {
-  width: 90%;                          /* % unit */
-  max-width: 900px;                    /* px unit */
-  margin: 0 auto 1.5rem auto;
-  padding: 1.5rem 2rem;
+  width: 90%;
+  max-width: 940px;
+  margin: 0 auto 2rem auto;
+  padding: 1.75rem 2.25rem;
   background-color: var(--clr-header-bg);
   border-radius: var(--radius);
-  border-top: 4px solid var(--clr-primary);  /* terracotta accent stripe */
-  box-shadow: var(--shadow);
+  border-top: 5px solid var(--clr-primary);
+  box-shadow: var(--shadow-lg);
 
-  /* Flexbox: stacks h1, nav, and skip-link vertically */
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
-/* Descendant selector — ul anywhere inside header nav */
 header nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 
-  /* Flexbox: nav links in a row; wrap on narrow screens */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.25rem;
+  gap: 0.35rem;
 }
 
 header nav ul li {
   padding: 0;
 }
 
-/* Override global li::before — no arrow in nav */
 header nav ul li::before {
   content: none;
 }
@@ -328,18 +318,17 @@ header nav ul li::before {
 nav a {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-decoration: none;
   color: var(--clr-text-light);
-  padding: 0.3rem 0.75rem;
+  padding: 0.4rem 0.9rem;
   border-radius: var(--radius);
   border: 1px solid transparent;
   display: inline-block;
 }
 
-/* Pseudo-class: terracotta fill on nav hover */
 nav a:hover {
   background-color: var(--clr-primary);
   color: #ffffff;
@@ -347,15 +336,23 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* Child selector — <p> directly inside <header> (skip-link wrapper) */
+nav a:visited {
+  color: var(--clr-text-light);
+}
+
+nav a:focus {
+  outline: 2px solid var(--clr-text-light);
+  outline-offset: 2px;
+}
+
 header > p {
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   margin: 0;
 }
 
 header > p a {
   color: var(--clr-border);
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   text-decoration: underline;
 }
 
@@ -366,45 +363,40 @@ header > p a:hover {
 
 /* ============================================================
    11. MAIN CONTENT AREA
-   Centered card that contains all page sections.
    ============================================================ */
 main {
-  width: 90%;            /* % unit */
-  max-width: 900px;      /* px unit */
+  width: 90%;
+  max-width: 940px;
   margin: 0 auto;
   background-color: var(--clr-surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
+  border: 1px solid var(--clr-border);
 }
 
 
 /* ============================================================
    12. SECTIONS & ARTICLES
-   Descendant and child selectors for precise targeting.
+   Descendant and child selectors.
    ============================================================ */
-
-/* Element selector */
 section {
-  padding: 2rem;
+  padding: 2.25rem 2.5rem;
   border-bottom: 1px solid var(--clr-border);
 }
 
-/* Pseudo-class: remove border on the last section */
 section:last-child {
   border-bottom: none;
 }
 
-/* Descendant selector — any article inside a section */
 section article {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 section article:last-child {
   margin-bottom: 0;
 }
 
-/* Child selector — h3 that is a direct child of article */
 article > h3 {
   color: var(--clr-secondary);
 }
@@ -412,33 +404,29 @@ article > h3 {
 
 /* ============================================================
    13. TWO-COLUMN FLEXBOX LAYOUT
-   Flex row + flex-wrap = responsive columns with no media queries.
-   Columns collapse naturally when viewport is narrow.
+   Flex row + flex-wrap = responsive without media queries.
    ============================================================ */
 .two-column {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;       /* wraps to 1 column on small screens */
+  flex-wrap: wrap;
   gap: 0;
   padding: 0;
 }
 
-/* Child selector — h2 directly inside .two-column spans full width */
 .two-column > h2 {
-  flex: 1 1 100%;        /* 100% — always occupies its own row */
-  padding: 2rem 2rem 1rem 2rem;
+  flex: 1 1 100%;
+  padding: 2.25rem 2.5rem 1.25rem 2.5rem;
   margin: 0;
   border-bottom: none;
 }
 
-/* Each article grows equally; min 240px before wrapping */
 .two-column article {
-  flex: 1 1 240px;       /* px — minimum width before wrapping */
-  padding: 1.25rem 2rem 2rem 2rem;
+  flex: 1 1 260px;
+  padding: 1.5rem 2.5rem 2.25rem 2.5rem;
   border-top: 1px solid var(--clr-border);
 }
 
-/* Pseudo-class + class — right divider between the two articles */
 .two-column article:first-of-type {
   border-right: 1px solid var(--clr-border);
 }
@@ -446,28 +434,24 @@ article > h3 {
 
 /* ============================================================
    14. BOX MODEL DEMO
-   Demonstrates margin, padding, border, and width/height.
    Parent = solid accent border; child = dashed border.
    ============================================================ */
-
-/* Descendant + class selectors */
 section article.box-demo-parent {
   background-color: var(--clr-surface-alt);
-  border-left: 4px solid var(--clr-secondary);  /* solid border */
+  border-left: 4px solid var(--clr-secondary);
   border-radius: 0 var(--radius) var(--radius) 0;
-  padding: 1rem 1.25rem;
+  padding: 1.25rem 1.5rem;
   margin-bottom: 0;
 }
 
-/* Descendant selector — child paragraph inside box-demo-parent */
 section article.box-demo-parent p.box-demo-child {
-  width: 100%;                                   /* % unit          */
-  padding: 1rem;                                 /* rem-based       */
+  width: 100%;
+  padding: 1rem 1.1rem;
   margin-top: 0.75rem;
   background-color: var(--clr-highlight-bg);
-  border: 2px dashed var(--clr-secondary);       /* dashed border   */
+  border: 2px dashed var(--clr-secondary);
   border-radius: var(--radius);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--clr-text);
 }
 
@@ -475,36 +459,37 @@ section article.box-demo-parent p.box-demo-child {
 /* ============================================================
    15. UTILITY CLASSES & ID RULES
    ============================================================ */
-
-/* Class selector */
 .highlight {
   color: var(--clr-primary);
   font-weight: 700;
 }
 
-/* ID selector — forces light text on the dark header background */
 #main-heading {
   color: var(--clr-text-light);
 }
 
-/* ID selector — green left border on the resources section */
-#resources {
-  border-left: 4px solid var(--clr-secondary);  /* solid border */
-  padding-left: 1.75rem;
+#skills {
+  border-left: 4px solid var(--clr-secondary);
+  padding-left: 2.25rem;
+}
+
+#availability {
+  border-left: 4px solid var(--clr-primary);
+  padding-left: 2.25rem;
 }
 
 
 /* ============================================================
    16. FOOTER
-   Minimal centered footer below the main card.
    ============================================================ */
 footer {
-  width: 90%;            /* % unit */
-  max-width: 900px;      /* px unit */
-  margin: 1.5rem auto 0 auto;
-  padding: 1rem 2rem;
+  width: 90%;
+  max-width: 940px;
+  margin: 1.75rem auto 0 auto;
+  padding: 1.1rem 2.5rem;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.83rem;
   color: var(--clr-muted);
   border-top: 2px solid var(--clr-border);
+  letter-spacing: 0.02em;
 }
